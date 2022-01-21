@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- SEO and social info -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="Hermit Plus" />
+    <meta
+      name="description"
+      content="One site to house them all. Hermit Plus! Think Netflix for hermits. Minecraft is an amazing game and from it sprang the hermits. Hermits call it Hermitcraft and we have enjoyed the antics and amazing builds. Soon, with Hermit Plus, you will be able to enjoy them in a very different way. Welcome to Hermit Plus! hermitplus"
+    />
+    <meta property="og:url" content="https://hermitplus.com" />
+    <meta property="og:title" content="Hermit Plus" />
+    <meta
+      property="og:description"
+      content="One site to house them all. Hermit Plus! Think Netflix for hermits. Minecraft is an amazing game and from it sprang the hermits. Hermits call it Hermitcraft and we have enjoyed the antics and amazing builds. Soon, with Hermit Plus, you will be able to enjoy them in a very different way. Welcome to Hermit Plus! hermitplus"
+    />
+    <!-- Image I want to present when linking in social networks -->
+    <meta
+      property="og:image"
+      content="https://github.com/Hermit-Plus/hermit-landing/blob/main/src/images/card-image.png?raw=true"
+      alt="Hermit Plus"
+    />
+    <meta
+      name="twitter:card"
+      content="One site to house them all. Hermit Plus! Think Netflix for hermits. Minecraft is an amazing game and from it sprang the hermits. Hermits call it Hermitcraft and we have enjoyed the antics and amazing builds. Soon, with Hermit Plus, you will be able to enjoy them in a very different way. Welcome to Hermit Plus! hermitplus"
+    />
+
+    <meta name="twitter:site" content="@hermit_plus" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&family=Luckiest+Guy&family=Teko&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Hermit Contact</title>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <header>
+      <nav>
+        <div class="logoBox">
+          <a href="https://www.hermitplus.com" target="_blank" rel="noreferrer">
+            <!-- public s3 bucket that holds images for site -->
+            <img
+              class="logo"
+              src="https://dev3027public.s3.amazonaws.com/HermitPlusLogo.png"
+              alt="hermit craft"
+            />
+          </a>
+        </div>
+        <div class="socialDiv">
+          <a
+            href="https://www.facebook.com/hermitsplus"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="socialBox">
+              <img
+                src="https://dev3027public.s3.amazonaws.com/facebook-f-brands.svg"
+                alt="Facebook"
+              />
+            </div>
+          </a>
+          <a
+            href="https://twitter.com/hermit_plus"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="socialBox">
+              <img
+                src="https://dev3027public.s3.amazonaws.com/twitter-brands.svg"
+                alt="Twitter"
+              />
+            </div>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Form section -->
+    <section class="sectionWrapper">
+      <div class="formContainer">
+        <div class="leftInfo">
+          <p class="loginTitle">Get in touch!</p>
+          <p>
+            I would love to hear from you! Whether you want to say hi, suggest
+            features or inquire more about the project. This is a collaborative
+            project and I am always looking for help. I keep both Twitter and
+            Facebook updated, so be sure to follow the project there.
+          </p>
+          <br />
+          <p>
+            Email: hermitplus@test.com
+            <br />
+            Typical reply within 24 hours
+          </p>
+          <br />
+          <p>You can also reach me through Facebook page - Messenger</p>
+          <img
+            class="pic"
+            src="https://dev3027public.s3.amazonaws.com/ground_color.svg"
+            alt="Minecraft Grass"
+          />
+        </div>
+        <div class="rightInfo">
+          <!-- Begin form -->
+          <form id="contact-form" class="signIn-form">
+            <div class="inputWrap">
+              <p id="p1" class="errorText"></p>
+            </div>
+            <div class="inputWrap">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" placeholder="Name" />
+            </div>
+            <div class="inputWrap">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <div class="inputWrap">
+              <div class="inputChoice">
+                <input
+                  type="radio"
+                  id="reason"
+                  name="reason"
+                  value="dev help"
+                />
+                <label>I would like to collaborate on development</label>
+              </div>
+              <div class="inputChoice">
+                <input
+                  type="radio"
+                  id="reason"
+                  name="reason"
+                  value="design help"
+                />
+                <label>I would like to collaborate on design</label>
+              </div>
+              <div class="inputChoice">
+                <input
+                  type="radio"
+                  id="reason"
+                  name="reason"
+                  value="beta tester"
+                />
+                <label>I would like to sign up for beta testing</label>
+              </div>
+            </div>
+            <div class="inputWrap">
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                cols="4"
+                rows="5"
+                id="message"
+                placeholder="How can I help you?"
+              ></textarea>
+            </div>
+            <div class="buttonWrap">
+              <button type="submit" onClick="submitToAPI(event)">
+                Find Diamonds
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="contactFooter">
+      <div>
+        <img
+          class="footerLogo"
+          src="https://dev3027public.s3.amazonaws.com/HermitPlusLogo.png"
+          alt="Hermit Craft Logo"
+        />
+      </div>
+      <div class="infoFooter">
+        <ul>
+          <li class="footerList">
+            <a
+              href="https://www.facebook.com/hermitsplus"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Facebook</p>
+            </a>
+          </li>
+          <li class="footerList">
+            <a
+              href="https://twitter.com/hermit_plus"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Twitter</p>
+            </a>
+          </li>
+          <li class="footerList">
+            <a
+              href="https://hermitplus.com/contact.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Contact</p>
+            </a>
+          </li>
+          <li class="footerList">
+            <p>&copy; copyright 2021</p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Javascript functionality -->
+    <script>
+      const submitToAPI = (event) => {
+        event.preventDefault();
+        // grab the fields in the form.
+        const errorTxt = document.getElementById('p1');
+        const confirmTxt = document.getElementById('p1').style;
+        const errorName = document.getElementById('name').style;
+        const errorEmail = document.getElementById('email').style;
+        const errorMessage = document.getElementById('message').style;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const reason = document.getElementById('reason').value;
+        // verify the form fields required
+        if (name == '' || email == '' || message == '') {
+          errorName.backgroundColor = 'var(--input-error)';
+          errorEmail.backgroundColor = 'var(--input-error)';
+          errorMessage.backgroundColor = 'var(--input-error)';
+          errorTxt.innerHTML = 'Please Fill All Required Field';
+        } else {
+          errorName.backgroundColor = 'var(--input-back)';
+          errorEmail.backgroundColor = 'var(--input-back)';
+          errorMessage.backgroundColor = 'var(--input-back)';
+          errorTxt.innerHTML = '';
+        }
+        // test and verify email
+        emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailRE.test(email)) {
+          errorEmail.backgroundColor = 'var(--input-error)';
+          errorTxt.innerHTML = 'Please enter a valid email';
+        }
+
+        const data = {
+          name: name,
+          email: email,
+          message: message,
+          reason: reason
+        };
+
+        fetch(
+          'https://k0ni8b7zs0.execute-api.us-east-1.amazonaws.com/production/contact',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById('contact-form').reset();
+            confirmTxt.color = 'var(--light-blue)';
+            errorTxt.innerHTML = 'Mail on the way, thank you!';
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      };
+    </script>
+  </body>
+</html>
