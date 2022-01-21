@@ -2,6 +2,8 @@
 
 I previously created a landing page for Hermit Plus, in ReactJs, set it up in a S3 bucket to make it highly available, and distributed it world wide, while keeping the S3 bucket secured, with Cloudfront. Now I am going to add a contact form that uses AWS services as well. By the end of this article, we will have built a contact form in html, made it stylish with css, added functionality with javascript, created an api, created a Lambda function, set up SES, and brought it all together so that when a visitor fills out the form, a email is sent to you.
 
+![](https://dev3027public.s3.amazonaws.com/Solution_Landing.png)
+
 ## Contact Form
 
 I will start with the contact form. There are some that will question why I choose to to this in HTML. Why not be a pro, use React or Vue. I would ask, why not HTML? If you call yourself a web developer, then it is a tool in your tool box. Your tools are only kept sharp and shiny if you use them. If you are anything like me, your HTML tool will be hard to find, rusty, and very dull. So break it out, grab some WD-40 and some steel wool, your favorite sharpening stone, and let's get shinny.
